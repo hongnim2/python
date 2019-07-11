@@ -34,9 +34,11 @@ def myavg(data):
 def printname():
     print(__name__)
 
-if __name__="__main__":
+'''
+if __name__ = "__main__":
     data=[1,2,3,4,5]
     print(mysum(data))
     print(mymax(data))
     print(mymin(data))
     print(myavg(data))
+'''

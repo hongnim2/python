@@ -1,0 +1,2 @@
+hello python
+test for file r/w
