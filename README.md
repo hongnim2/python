@@ -1,4 +1,10 @@
 # python
+1. package 설치
+  1.1. pycharm setting > project interpreter에서 cython, setuptools 설치
+
+----------------------------------------------------------------------------------------
+
+# python
 1. anaconda3 최신 설치
 https://www.runnablecode.com/category/SW/Lang%20%7C%20Python
   1.1. 설치경로 확인 : C:\Users\<사용자명>\Anaconda3
