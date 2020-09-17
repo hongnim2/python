@@ -1,0 +1,2 @@
+1. def, cdef, cpdef차이 : def는 python에서 호출, cdef는 cython에서 호출-python은 호출불가, cpdef는 python호출
+  https://stackoverflow.com/questions/28362009/definition-of-def-cdef-and-cpdef-in-cython
