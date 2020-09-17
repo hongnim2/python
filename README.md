@@ -2,6 +2,41 @@
 1. package 설치
   1.1. pycharm setting > project interpreter에서 cython, setuptools 설치
 
+2. PyCharm에 File Type 추가
+https://geoexamples.com/python/2017/04/20/pycharm-cython.html#:~:text=Compiling%20the%20cython%20file&text=Open%20File%2D%3ESettings%2D%3E,name%20at%20the%20project%20pane.
+  2.1. File->Settings->Editor->File Types에서 Add Recognized File Types
+    Name: Cython
+    Cython files: Cython files
+    Line comment: #
+    Block comment start/end: '''
+    Keywords #1: cdef, cpdef, cimport, ctypedef, def, for, if, import, return, while
+  2.2. Add File Name Patterns
+    *.pyx, *.pyd
+
+3. setup.py 생성 및 설정
+  3.1. Tools->create setup.py
+  3.2. setup.py 수정
+    from Cython.Build import cythonize
+    
+    setup(
+      ext_modules = cythonize("helloworld.pyx")
+    )
+
+4. External Tool 설정
+  4.1. File->Settings->Tools->External Tools에서  add
+    Name: cython compile
+    Description: Compile the cython files
+    Program: python
+    Arguments: setup.py build_ext --inplace
+    Working directory: $ProjectFileDir$
+    Advanced options: all check
+    
+5. MinGW 설치
+https://cython.readthedocs.io/en/latest/src/tutorial/appendix.html
+  5.1. 설치파일 다운로드
+  5.2. Basic Package만 설치
+  5.3. MSVC Build Tool 설치
+    
 ----------------------------------------------------------------------------------------
 
 # python
