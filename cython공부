@@ -21,6 +21,8 @@ cpdef unsigned char* calc_add(list b):
 
 main.py
 ---------------------------------
+import Test
+
 b=[2,3]
 c = Test.calc_add(b)
 cc=[*map(int, c)]
