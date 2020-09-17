@@ -1,2 +1,28 @@
 1. def, cdef, cpdef차이 : def는 python에서 호출, cdef는 cython에서 호출-python은 호출불가, cpdef는 python호출
   https://stackoverflow.com/questions/28362009/definition-of-def-cdef-and-cpdef-in-cython
+
+2. def에서 cpdef로 array를 arg로 연산 후, array리턴 받을 경우, cpdef에서 length 결정해서 리턴 필요
+ex>
+Test.pyx
+---------------------------------
+# cython: language_level=3
+
+cdef unsigned char a[2]
+a=[1,2]
+
+cpdef unsigned char* calc_add(list b):
+    cdef unsigned char c[2]
+    c=[0,0]
+    c=[a[0]+b[0], a[1]+b[1]]
+    print(c[0:2])
+
+    return c[0:2]
+---------------------------------
+
+main.py
+---------------------------------
+b=[2,3]
+c = Test.calc_add(b)
+cc=[*map(int, c)]
+print(cc)
+---------------------------------
