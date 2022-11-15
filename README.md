@@ -1,6 +1,6 @@
 # python
 1. package 설치
-  1.1. pycharm setting > project interpreter에서 cython, setuptools 설치
+	1.1. pycharm setting > project interpreter에서 cython, setuptools 설치
 
 2. PyCharm에 File Type 추가
 https://geoexamples.com/python/2017/04/20/pycharm-cython.html#:~:text=Compiling%20the%20cython%20file&text=Open%20File%2D%3ESettings%2D%3E,name%20at%20the%20project%20pane.
